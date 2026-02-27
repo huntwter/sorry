@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-float-slow: float 6s ease-in-out infinite;
+  --animate-float-medium: float 4s ease-in-out infinite;
+  --animate-float-fast: float 3s ease-in-out infinite;
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply m-0 p-0 font-sans text-gray-800 antialiased overflow-hidden select-none bg-gradient-to-br from-pink-100 via-purple-100 to-indigo-100 h-screen w-screen touch-none;
+  }
+}
